@@ -70,17 +70,26 @@ if (isAdult >= 0 && isAdult <=10){console.log('Sorry User, You are soooo young((
  let triangleSideA = Number(prompt('User, Enter please Side A at your Triangle\'s' ,''));
  let triangleSideB = Number(prompt('User, Enter please Side B at your Triangle\'s' ,''));
  let triangleSideC = Number(prompt('User, Enter please Side C at your Triangle\'s' ,''));
- let firstTask = (triangleSideA + triangleSideB + triangleSideC);
-console.log(firstTask);
 
-let secondTask = (triangleSideA + triangleSideB + triangleSideC );
+ // task 6 (a);
 
-//a<c and b<c ********** If these formulas are suitable then is right triangle)
+ if (triangleSideA >0 && triangleSideB > 0 && triangleSideB >0 ){
+     let pr=(triangleSideA + triangleSideB + triangleSideC) / 2;
+     let triangleArea = Math.sqrt(pr * (pr - triangleSideA) * (pr - triangleSideB) * (pr - triangleSideC));
+     console.log(triangleArea.toFixed(3));
+ } else { console.log('Incorrect data');
+}
 
-    if (triangleSideA < triangleSideC && triangleSideB < triangleSideC){
-         console.log(secondTask.toFixed(3));
-    } else { (triangleSideA > triangleSideC && triangleSideB > triangleSideC );
-         (console.log('Incorrect data')) };
+// task 6 (b);
+
+if ((triangleSideA * triangleSideA + triangleSideB * triangleSideB === triangleSideC + triangleSideC) || 
+(triangleSideB * triangleSideB + triangleSideC * triangleSideC === triangleSideA * triangleSideA ) ||
+(triangleSideA * triangleSideA + triangleSideC * triangleSideC === triangleSideB * triangleSideB )){
+    console.log('The triangle is right');
+} else {console.log('The triangle isn`t right');
+}
+
+
 
 
 //**************************************//// TASK 7 ////**********************************************************//
@@ -88,34 +97,19 @@ let secondTask = (triangleSideA + triangleSideB + triangleSideC );
 //First method
 
 let timeNow = new Date();
-	
-switch(time.getDay()) {
-	case 5:
-	case 6:
-	case 7:
-	case 8:
-	case 9:
-	case 10:
-    case 11:
-		console.log('Good morning!');
+let hourNow = timeNow.getHours();	
+switch(true) {
+	case (hourNow <= 11 && hourNow >= 5):
+		alert('Good morning!');
 		break;
-	case 12:
-    case 13:
-    case 14:
-    case 15:
-    case 16:
-    case 17:                                     
-		console.log('Good day!');
+	case (hourNow >= 12 && hourNow< 17):                                     
+		alert('Good day!');
 		break;  
-    case 18:
-    case 19:
-    case 20:
-    case 21:
-    case 22: 
-    case 23:
-        console.log('Good evening!');
-	default:
-		console.log('Good Night!');
+    case (hourNow >=18 && hourNow <=23):
+        alert('Good evening!');
+        break;
+	case (hourNow >=23 || hourNow <=5):
+		alert('Good Night!');
 		break;
 }
 
