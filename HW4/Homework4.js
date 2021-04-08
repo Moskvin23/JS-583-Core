@@ -25,6 +25,7 @@ console.log('task 1');
 
 
          console.log('task 2');
+
     function checkAge(){
          let ageUser = prompt('Hey User!, can you enter, your age please?',' ');
         if (!ageUser) {
@@ -53,6 +54,7 @@ console.log('task 1');
     //**************************************//// TASK 3 ////**********************************************************//
 
 console.log('task 3');
+
 class MonthException {
     constructor(message) {
         this.name = 'MonthException';

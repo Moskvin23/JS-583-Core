@@ -1,5 +1,5 @@
 //**************************************//// TASK 1 ////**********************************************************//
-
+console.log('task 1');
 
 let x = 1;
 let y = 2;
@@ -22,6 +22,7 @@ console.log(typeof res4);
 
 
 //**************************************//// TASK 2 ////**********************************************************//
+console.log('task 2');
 
 let numberUser = prompt('Hey User, please Enter any random positiv numberUser','') 
 
@@ -32,7 +33,7 @@ if (numberUser %7===0) {console.log(false);}
 
 
 //**************************************//// TASK 3 ////**********************************************************//
-
+console.log('task 3');
 
 const array = [];
 array[0] = 2323;
@@ -50,6 +51,7 @@ console.log(newArray);
     
 
 //**************************************//// TASK 4 ////**********************************************************//
+console.log('task 4');
 
 let cities = ["Rome", "Lviv", "Warsaw"]; 
 let citiesAdd = cities.join('*');
@@ -57,7 +59,7 @@ let citiesAdd = cities.join('*');
 console.log(citiesAdd);
 
 //**************************************//// TASK 5 ////**********************************************************//
-
+console.log('task 5');
 
 
 let isAdult = prompt('Hey User, Are you already 18 years old? How old are you???','');
@@ -66,6 +68,7 @@ if (isAdult >10 && isAdult <18 ){ console.log('Sorry User, but you are not yet 1
 if (isAdult >= 0 && isAdult <=10){console.log('Sorry User, You are soooo young((((')};
 
 //**************************************//// TASK 6 ////**********************************************************//
+console.log('task 6');
 
  let triangleSideA = Number(prompt('User, Enter please Side A at your Triangle\'s' ,''));
  let triangleSideB = Number(prompt('User, Enter please Side B at your Triangle\'s' ,''));
@@ -93,7 +96,7 @@ if ((triangleSideA * triangleSideA + triangleSideB * triangleSideB === triangleS
 
 
 //**************************************//// TASK 7 ////**********************************************************//
-
+console.log('task 7');
 //First method
 
 let timeNow = new Date();

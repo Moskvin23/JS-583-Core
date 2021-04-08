@@ -1,5 +1,5 @@
 //**************************************//// TASK 2 ////**********************************************************//
-
+console.log('task 2');
 
 const Surname = "Москвін";
 console.log(Surname);
@@ -7,6 +7,7 @@ console.log(Surname);
 
 //**************************************//// TASK 3 ////**********************************************************//
 
+console.log('task 3');
 
 const name1 = "very important text";
 const name2 = "just text";
@@ -21,7 +22,7 @@ name1 = name2;
 alert(name1);
 
 //**************************************//// TASK 4 ////**********************************************************//
-
+console.log('task 4');
 
 const DataTypes = {
     string: 'Some string',
@@ -32,6 +33,7 @@ const DataTypes = {
 };
 
 //**************************************//// TASK  5 ////**********************************************************//
+console.log('task 5');
 
 const isAdult = confirm("Are you already an adult ?");
 console.log(isAdult);
@@ -41,7 +43,7 @@ console.log(isAdult);
 
 
 //**************************************//// TASK  6 ////**********************************************************//
-
+console.log('task 6');
 
 const myName = "Pasha";
 const mySurname = "Moskvin";
@@ -63,6 +65,7 @@ const lesson2;
 console.log(typeof lesson1, typeof lesson2);
 
 //**************************************//// TASK 7 ////**********************************************************//
+console.log('task 7');
 
 const userName = prompt("Dear User your name is?", "User");
 const userEmail = prompt("Dear User your Email is?", "usermale@gmail.com");
@@ -73,7 +76,7 @@ alert(userName, userEmail, userPassword);
 
 
 //**************************************//// TASK 8 ////**********************************************************//
-
+console.log('task 8');
 
 const amountSecondsInMinute = 60;
 const amountSecondsInHour = (amountSecondsInMinute * 60);
