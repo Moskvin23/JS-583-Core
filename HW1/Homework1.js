@@ -8,7 +8,6 @@ console.log(Surname);
 //**************************************//// TASK 3 ////
 
 console.log('task 3');
-
 const name1 = "very important text";
 const name2 = "just text";
 name2 = name1;
