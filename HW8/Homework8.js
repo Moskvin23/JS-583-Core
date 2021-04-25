@@ -1,8 +1,5 @@
 // //**************************************//// TASK 1 ////
 
-//  Напишіть функцію, яка перевірятиме чи перший символ в рядку написаний в верхньому регістрі, чи ні.
-
-
 console.log("task 1");
 function upperCase(str) {
   regexp = /^[A-Z]/;
@@ -15,48 +12,26 @@ function upperCase(str) {
 upperCase("regexp");
 upperCase("RegExp");
 
-
 // //**************************************//// TASK 2 ////
-
-
-//   Напишіть функцію, яка приймає рядкові дані і виконує перевірку на їх відповідність емейлу. Валідними вважаються всі символи на різних позиціях.
-// 	Приклад роботи:
-// checkEmail("Qmail2@gmail.com");
-// true
-
 
 console.log("task 2");
 
 function checkEmail(str) {
   const reg = /\S+@\S+\.\S+/;
 
-  return reg.test(str);
+  console.log(reg.test(str));
 }
-console.log(checkEmail("Qmail2@gmail.com"));
-
+checkEmail("Qmail2@gmail.com");
 
 // //**************************************//// TASK 3 ////
 
-
-//  Напишіть регулярний вираз, який знаходитиме в тексті одну літеру d, за якою йде одна чи більше b, за якими одна d. Запам’ятати знайдені b і наступну за ними d.  Враховувати верхній і нижній регістр.
-// 	Приклад роботи:   
-// Для стрінги "cdbBdbsbz" результат ["dbBd", "bB", "d"]
 console.log("task 3");
-
 
 let re = /d(B+)(d)/gi;
 let myArray = re.exec("cdbBdbsbz");
 console.log(myArray);
 
 // //**************************************//// TASK 4 ////
-
-
-// Напишіть регулярний вираз, який в рядковому тексті 2 підстрічки буде міняти місцями.
-// 	Приклад роботи:
-// Вхідний рядок    "Java Script"
-// Вихід    “Script, Java”
-
-
 
 console.log("task 4");
 
@@ -68,11 +43,7 @@ function reg(str) {
 
 console.log(reg("Java Script"));
 
-
-
 // //**************************************//// TASK 5 ////
-
-//Напишіть функцію, яка виконуватиме валідацію номера банківської карти (9999-9999-9999-9999).
 
 console.log("task 5");
 
@@ -86,42 +57,33 @@ function creditCard(str) {
 }
 console.log(creditCard("9999-9999-9999-9999"));
 
-
 // //**************************************//// TASK 6 ////
 
+console.log("task 6");
 
-// Напишіть функцію, яка приймає рядкові дані і виконує перевірку на їх відповідність емейлу.
-// 	Вимоги:
-// •  Цифри (0-9).
-// •  Тільки латинські літери в великому (A-Z) і малому (a-z) регістрах.
-// •  В тілі емейла допустимі лишеі символи “_” і “-”. Але вони не можуть бути 1-им символом емейлу.
-//  •  Символ “-” не може повторюватися.
+function checkEmail(str) {
+  const demand = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/;
+  if (demand.test(str)) {
+    console.log("Email is correct!");
+  } else {
+    console.log("Email isn`t correct!");
+  }
+}
 
-// checkEmail('my_mail@gmail.com'); 
-// Email is correct!
-// checkEmail('#my_mail@gmail.com');
-// Email is not correct!
-
-
-
-
-
-
-
-
-
-
-
+checkEmail("my_mail@gmail.com");
+checkEmail("#my_mail@gmail.com");
 
 // //**************************************//// TASK 7 ////
 
+console.log("task 7");
 
-// Напишіть функцію, яка перевіряє правильність логіна. Правильний логін - рядок від 2 до 10 символів, що містить лише букви та цифри, номер не може бути першим. Функція має приймати рядок і знаходити усі числа в цьому рядку, включаючи числа з плаваючою комою (наприклад, 3.4).
-// 	Приклад роботи:
-// checkLogin('ee1.1ret3');
-// true 
-// 1.1, 3
+function checkLogin(str1) {
+  const demand1 = /^[a-zA-Z]{1}[a-zA-Z0-9\.]{1,9}$/;
+  const req = /[0-9\.]+/g;
+  const res = str1.match(req);
+  const result = demand1.test(str1);
+  console.log(`${str1} ${result} - ${res}`);
+}
 
-// checkLogin('ee1*1ret3');
-// false 
-// 1, 1, 3
+checkLogin("ee1.1ret3");
+checkLogin("ee1*1ret3");
