@@ -28,10 +28,17 @@ console.log(age4); // 26
 
 console.log("task 3");
 
-function mul() {
-  
-}  
-
+function mul(...res) {
+  let result = 1;
+  let isNumber;
+  for (let i of res) {
+    if (typeof i == "number") {
+      result = result * i;
+      isNumber = true;
+    }
+  }
+  return isNumber ? result : 0;
+}
 console.log(mul(1, "str", 2, 3, true)); // 6
 console.log(mul(null, "str", false, true)); // 0
 
@@ -42,8 +49,8 @@ let server = {
   data: 0,
   convertToString: function (callback) {
     callback(() => {
-        return this.data + "";
-      });
+      return this.data + "";
+    });
   },
 };
 let client = {
@@ -65,11 +72,16 @@ console.log(typeof client.result); // "string"
 
 // //**************************************//// TASK 5////
 console.log("task 5");
-function mapBuilder(keysArray, valuesArrays){
+
 let keys = [1, 2, 3, 4];
 let values = ["div", "span", "b", "i"];
-let map = mapBuilder(keys, values);
+function mapBuilder(keysArray, valuesArrays) {
+  const map = new Map();
+  for (i of keysArray) {
+    map.set(i, valuesArrays[i - 1]);
+  }
+  return map;
 }
-
+let map = mapBuilder(keys, values);
 console.log(map.size); // 4
 console.log(map.get(2)); // "span"
